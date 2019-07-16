@@ -8,12 +8,16 @@ call vundle#begin()
 
  " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'marcopaganini/termschool-vim-theme'  "colorscheme
-Plugin 'christoomey/vim-tmux-navigator'   "integrate vim with tmux navigation
-Plugin 'python-mode/python-mode'
-Plugin 'ctrlpvim/ctrlp.vim'               "file finder
+" Enable tmux navigation
+Plugin 'christoomey/vim-tmux-navigator'
+" Plugin 'python-mode/python-mode'
+" File finder
+Plugin 'ctrlpvim/ctrlp.vim'
 " Plugin 'python/black'
+" Add file browsing bar
 Plugin 'scrooloose/nerdtree'
+" Autocompletion
+Plugin 'davidhalter/jedi-vim'
 
  " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,6 +40,7 @@ hi Folded ctermbg=darkgrey
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
