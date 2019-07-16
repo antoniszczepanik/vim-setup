@@ -18,6 +18,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 " Autocompletion
 Plugin 'davidhalter/jedi-vim'
+" Pymode 
+Plugin 'python-mode/python-mod'
 
  " All of your Plugins must be added before the following line
 call vundle#end()            " required
