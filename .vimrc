@@ -13,14 +13,13 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Plugin 'python-mode/python-mode'
 " File finder
 Plugin 'ctrlpvim/ctrlp.vim'
-" Plugin 'python/black'
 " Add file browsing bar
 Plugin 'scrooloose/nerdtree'
-" Autocompletion
-Plugin 'davidhalter/jedi-vim'
 " Pymode 
-Plugin 'python-mode/python-mod'
-
+Plugin 'python-mode/python-mode'
+" Blame
+Plugin 'zivyangll/git-blame.vim'
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
  " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required 
@@ -43,7 +42,6 @@ hi Folded ctermbg=darkgrey
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -54,7 +52,7 @@ endif
 
 """MAKE LIFE EASIER""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set history=50		           " keep 50 lines of command line history
+set history=100		           " keep 50 lines of command line history
 set incsearch		             " do incremental searching
 set ignorecase               " search is case insensitive
 set nu rnu                   " set numbers and relative line numbers
@@ -73,7 +71,6 @@ let python_highlight_all = 1 " enable all Python syntax highlighting features
 set showmatch                " show the matching for [], {} and ()
 set showcmd		               " display what you are writing as a command
 set colorcolumn=80           " show 80th column
-set ruler		                 " show the cursor position (line, column etc)
 set hlsearch                 " highlight string matched in search
 
 
