@@ -1,3 +1,5 @@
+"""PLUGINS"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Vundle Requirements
 set nocompatible 
 filetype off
@@ -5,7 +7,6 @@ filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
  " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " Enable tmux navigation
@@ -25,7 +26,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required 
 " Put your non-Plugin stuff after this line
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""COLORS""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set dark background
 colorscheme gruvbox 
@@ -38,9 +39,7 @@ hi VertSplit ctermfg=darkgrey
 hi ColorColumn ctermbg=darkgrey
 hi Folded ctermbg=darkgrey
 
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+"""OTHER"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -108,9 +107,12 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
-"Smart way to move between windows
+" Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Open NERDTree with ,ne
+let mapleader = ","
+nmap <leader>ne :NERDTree<cr>
